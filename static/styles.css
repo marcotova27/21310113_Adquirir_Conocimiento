@@ -1,0 +1,92 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Estilo del título */
+.titulo {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo del historial de mensajes */
+.historial {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de las preguntas del usuario */
+.preguntas {
+    color: #2980b9;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Estilo de las respuestas del chatbot */
+.respuestas {
+    color: #16a085;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* Estilo del formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo de las etiquetas */
+.label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Estilo del campo de entrada de texto */
+.input-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Estilo del botón */
+.boton {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+/* Efecto hover para el botón */
+.boton:hover {
+    background-color: #2980b9;
+}
+
+/* Mensaje informativo */
+.mensaje {
+    text-align: center;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
