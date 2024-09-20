@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar conocimiento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Agregar nueva respuesta</h1>
-    <p>No tengo una respuesta para "{{ entrada }}".</p>
-    <form method="POST" action="/nuevo">
-        <label for="nueva_respuesta">¿Qué debería responder?</label>
-        <input type="text" id="nueva_respuesta" name="nueva_respuesta" required>
-        <button type="submit">Guardar</button>
+    <h1 class="titulo">Agregar nueva respuesta</h1>
+    <p class="mensaje">No tengo una respuesta para "{{ entrada }}".</p>
+    <form method="POST" action="/nuevo" class="formulario">
+        <input type="hidden" name="entrada" value="{{ entrada }}">
+        <label for="nueva_respuesta" class="label">¿Qué debería responder?</label>
+        <input type="text" id="nueva_respuesta" name="nueva_respuesta" class="input-text" required>
+        <button type="submit" class="boton">Guardar</button>
     </form>
 </body>
 </html>
-
