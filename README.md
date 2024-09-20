@@ -57,7 +57,6 @@
             font-weight: bold;
         }
     </style>
-</head>
 <body>
 
 <h1>Chatbot con Flask y SQLite</h1>
