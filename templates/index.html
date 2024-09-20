@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Chatbot</h1>
-    <form method="POST" action="/">
-        <label for="entrada_usuario">Escribe algo:</label>
-        <input type="text" id="entrada_usuario" name="entrada_usuario" required>
-        <button type="submit">Enviar</button>
-    </form>
+    <h1 class="titulo">Chatbot</h1>
 
-    {% if entrada and respuesta %}
-    <p><strong>Tú:</strong> {{ entrada }}</p>
-    <p><strong>Chatbot:</strong> {{ respuesta }}</p>
-    {% endif %}
+    <!-- Mostrar el historial de mensajes -->
+    <div class="historial">
+        {% for mensaje in historial %}
+            <p class="preguntas"><strong>Tú:</strong> {{ mensaje.usuario }}</p>
+            <p class="respuestas"><strong>Chatbot:</strong> {{ mensaje.chatbot }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Formulario de interacción -->
+    <form method="POST" action="/" class="formulario">
+        <label for="entrada_usuario" class="label">Escribe algo:</label>
+        <input type="text" id="entrada_usuario" name="entrada_usuario" class="input-text" required>
+        <button type="submit" class="boton">Enviar</button>
+    </form>
 </body>
 </html>
-
